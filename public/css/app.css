@@ -25,6 +25,10 @@ a, a:active, a:hover, a:focus {
   font-size: 1.15rem;
 }
 
+ul.no_bullets {
+  list-style-type: none;
+}
+
 .margin-sm {
   margin: 10px;
 }

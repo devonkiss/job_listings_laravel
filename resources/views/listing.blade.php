@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<head>
-  <title>{{$heading}}</title>
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
-</head>
-<body>
+@extends('layout')
+
+@section('content')
 <div class="small_description">
-  <h1>{{$listing['title']}}</h1>
+  <h3>{{$listing['title']}}</h3>
   <hr/>
   <div>
     <strong>Company: </strong>{{$listing['company']}}<br/>
@@ -32,5 +29,4 @@
     </strong>
   </center>
 </div>
-</body>
-</html>
+@endsection

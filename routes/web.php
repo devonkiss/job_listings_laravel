@@ -15,16 +15,9 @@ use App\Models\Listing;
 |
 */
 
-// Homepage
-Route::get('/', function () {
-    return view('homepage', [
-        'heading' => 'Welcome to Listing Services'
-    ]);
-});
-
 // All Listings Endpoint
-Route::get('/listings/all', function() {
-    return view('all_listings', [
+Route::get('/', function() {
+    return view('listings', [
         'heading' => 'All Listings',
         'listings' => Listing::all()
     ]);
@@ -35,12 +28,5 @@ Route::get('/listings/{id}', function($id) {
     return view('listing', [
         'heading' => 'Single Listing',
         'listing' => Listing::find($id)
-    ]);
-});
-
-// Contact Us Page
-Route::get('/contact-us', function() {
-    return view('contact', [
-        'heading' => 'Contact Us'
     ]);
 });
