@@ -18,7 +18,6 @@ use App\Models\Listing;
 // All Listings Endpoint
 Route::get('/', function() {
     return view('listings', [
-        'heading' => 'All Listings',
         'listings' => Listing::all()
     ]);
 });
