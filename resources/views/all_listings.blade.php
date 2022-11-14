@@ -4,23 +4,25 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
 </head>
 <body>
+<div class="small_description">
   <h1>{{$heading}}</h1>
   <hr/>
   @unless(count($listings) == 0)
   @foreach($listings as $listing)
-    <div>
+    <div class="small_description">
       <h2>
         <a href="/listings/{{$listing['id']}}">
           {{$listing['title']}}
         </a>
       </h2>
-      <p>
+      <div>
         {{$listing['description']}}
-      </p>
+      </div>
     </div>
   @endforeach
   @else
-  <p>No listings found</p>
+  <div class="small_description">No listings found</div>
   @endunless
+</div>
 </body>
 </html>

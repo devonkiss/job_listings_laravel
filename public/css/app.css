@@ -21,6 +21,10 @@ a, a:active, a:hover, a:focus {
   text-decoration: dotted underline;
 }
 
+.small_description {
+  font-size: 1.15rem;
+}
+
 .margin-sm {
   margin: 10px;
 }
