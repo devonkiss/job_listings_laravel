@@ -21,7 +21,7 @@ class ListingController extends Controller
     ]);
   }
 
-  // Create an Individual Listing
+  // Show Create Form
   public function create() {
     return view('listings.create');
   }
