@@ -21,3 +21,6 @@ Route::get('/', [ListingController::class, 'index']);
 
 // Single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+// Create a Listing
+Route::get('/listings-create', [ListingController::class, 'create']);
