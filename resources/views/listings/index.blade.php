@@ -6,7 +6,13 @@
     @unless(count($listings) == 0)
       @php
           if (request('tag') != null) {
-            echo "<strong><i>Only showing tags containing: " . request('tag') . "</i></strong>";
+            echo "<strong><i>Only showing tags containing: " . request('tag') . "</i></strong><br/>";
+            echo "<span class='text-red-600'><small><a href='/'>Clear tag filter.</a></small></span>";
+          }
+
+          if (request('search') != null) {
+            echo "<i>Only showing listings whose Title, Description, or Tags contain: '" . request('search') . "'</i><br/>";
+            echo "<span class='text-red-600'><small><a href='/'>Clear search filter.</a></small></span>";
           }
       @endphp
       @foreach($listings as $listing)
